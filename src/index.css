@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Rbtn{
+    @apply border border-black p-2 mr-2 border-solid rounded cursor-pointer
+}
