@@ -6,8 +6,8 @@ import Color from "./Color/Color";
 export default function Sidebar() {
   return (
     <>
-    <section className="sidebar flex w-1/6 fixed h-full border-r-2 border-solid border-black z-3  items-center">
-        <div className="logo-container mb-16">
+    <section className=" flex flex-col w-3/20 h-full absolute left-0 top-0 z-3 items-center border border-solid border-gray-500 ">
+        <div className="mb-5">
             <h1 className="mt-6"><FaShoppingCart/></h1>
         </div>
         <Category/>
