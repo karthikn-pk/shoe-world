@@ -4,20 +4,10 @@ import Card from '../components/Card';
 
 
 
-function Products() {
+function Products({result}) {
   return (
         <section className='flex flex-wrap ml-80 mt-0'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        {result}
     </section>
 
     

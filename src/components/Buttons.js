@@ -1,7 +1,6 @@
-import React from 'react'
-function Buttons() {
+function Buttons({onClickHandler,value,title}) {
   return (
-    <div>Buttons</div>
+   <button onClick={onClickHandler} value={value} className="Rbtn">{title}</button>
   )
 }
 
