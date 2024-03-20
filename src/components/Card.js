@@ -3,10 +3,10 @@ import { FaShoppingBag } from "react-icons/fa";
 
 function Card({img,title,star,reviews,newPrice,prevPrice}) {
   return (
-    <div>
+    <div style={{ width: '300px', height: '400px' }}>
 
 <section className='m-5 p-5 cursor-pointer border border-solid border-black'>
-            <img className='w-52 mb-4' src={img} alt={title} />
+            <img className='w-full h-52 mb-4 object-contain' src={img} alt={title} />
 
         
         <div>

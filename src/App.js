@@ -18,7 +18,10 @@ function App() {
     setSearchText(e.target.value)
   }
 
-  const filteredItems=products.filter((product)=>product.title.toLowerCase().indexOf(searchText.toLowerCase())!==-1);
+  const handleSearch=(text)=>{
+    setSearchText(text);  }
+
+  // const filteredItems=products.filter((product)=>product.title.toLowerCase().indexOf(searchText.toLowerCase())!==-1);
 
 //Radio btn filter//
 
@@ -36,9 +39,9 @@ const handleChange=(e)=>{
   let filteredProducts=products;
 
   //filtered input
-  if(searchText){
-    filteredProducts=filteredItems
-  }
+  // if(searchText){
+  //   filteredProducts=filteredItems
+  // }
 
   //selected filter
   if(selected){
@@ -57,7 +60,7 @@ return filteredProducts.map(({img,title,star,reviews,newPrice,prevPrice})=>(
   return (
     <div className="overflow-hidden">
     
-   <Nav searchText={searchText} handleInputChange={handleInputChange}/>
+   <Nav handleSearch={handleSearch}/>
    <Sidebar handleChange={handleChange}/>
    <Recommended handleClick={handleClick}/>
    <Products result={result}/>
