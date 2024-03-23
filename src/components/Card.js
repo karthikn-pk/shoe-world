@@ -13,7 +13,7 @@ function Card({img,title,star,reviews,newPrice,prevPrice}) {
             <h3 className='mb-4 font-bold text-xl'>{title}</h3>
             <section className='flex'>
                 {star} {star} {star} {star}
-                <span className='font-bold ml-3'>4</span>
+                <span className='font-bold ml-3'>4</span> <span>{reviews}</span>
             </section>
         <section className='flex justify-around items-center'>
 

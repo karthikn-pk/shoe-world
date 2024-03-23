@@ -32,12 +32,13 @@ const handleChange=(e)=>{
 //button filter//
  const handleClick=(e)=>{
   setSelectedCategory(e.target.value);
+ 
  }
 
  //
  function filteredData(products,selected,searchText){
   let filteredProducts=products;
-
+  console.log(selected);
   //filtered input
   // if(searchText){
   //   filteredProducts=filteredItems
