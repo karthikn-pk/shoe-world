@@ -2,36 +2,25 @@ import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { RiUserAddFill } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function Nav({ handleSearch }) {
-  const [searchText, setSearchText] = useState("");
-
-  const handleInputChange = (e) => {
-    setSearchText(e.target.value);
-  };
+function Nav() {
+  const cartItems = useSelector((store) => store.cart);
 
   return (
-    <nav className="flex justify-around items-center ml-1/6 ">
-      <div className=" px-3 py-2 m-3 mr-5 ">
-        <input
-          type="text"
-          className="border border-black p-2 rounded-md"
-          placeholder="search your shoes"
-          value={searchText}
-          onChange={handleInputChange}
-        />
-        <button
-          className="Rbtn ml-4"
-          onClick={() => {
-            handleSearch(searchText);
-          }}>
-          Search
-        </button>
-      </div>
-      <div className="flex ml-4">
-        <button className="m-3">
-          <FaShoppingCart />
+    <nav className="flex justify-around items-center ml-[70%] ">
+      <div className="flex ml-4 text-3xl">
+        <Link to={"/"}>
+          <h1 className="m-3">HOME</h1>
+        </Link>
+        <button className="m-3 relative">
+          <Link to={"/cart"}>
+            <FaShoppingCart />
+            <span className=" bg-red-500 rounded-lg text-bold text-white ml-4 px-1 absolute top-[-18px] right-[-13px] ">
+              {cartItems.length}
+            </span>
+          </Link>
         </button>
         <button className="m-3">
           <FaRegHeart />
