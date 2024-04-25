@@ -9,8 +9,14 @@ function Nav() {
   const cartItems = useSelector((store) => store.cart);
 
   return (
-    <nav className="flex justify-around items-center ml-[70%] ">
-      <div className="flex ml-4 text-3xl">
+    <nav className="flex justify-between items-center ml-[50%] ">
+      <div className="">
+        <h1 className="text-4xl font-serif bg-green-600 p-1 rounded-md">
+          Shoe World!!
+        </h1>
+      </div>
+
+      <div className="flex ml-4 text-3xl ">
         <Link to={"/"}>
           <h1 className="m-3">HOME</h1>
         </Link>
